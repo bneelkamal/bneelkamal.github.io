@@ -8,67 +8,97 @@
     name="description"
     content="Portfolio of Neelkamal Badana — AI Product Manager and Executive M.Tech (AI & ML, IIT Jodhpur) researcher working on agentic AI systems and privacy-preserving federated learning."
   />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+          },
           colors: {
             ink: "#0f172a",
             muted: "#475569",
-            accent: "#1d4ed8",
-            surface: "#f8fafc",
+            subtle: "#64748b",
+            accent: "#2563eb",
+            accentSoft: "#eff6ff",
+            borderLight: "#e2e8f0",
+            surface: "#ffffff",
+            canvas: "#f8fafc",
           },
         },
       },
     };
   </script>
 </head>
-<body class="bg-surface text-ink antialiased selection:bg-blue-100 selection:text-blue-900">
-  <!-- Navigation -->
-  <nav class="sticky top-0 z-30 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+<body class="bg-canvas font-sans text-ink antialiased selection:bg-blue-100 selection:text-blue-900">
+  <!-- Sticky Light Navigation -->
+  <nav class="sticky top-0 z-30 border-b border-borderLight/80 bg-white/85 backdrop-blur-md">
     <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-      <a href="#top" class="text-base font-bold tracking-tight text-ink">
+      <a href="#top" class="flex items-center gap-2 text-sm font-bold tracking-tight text-ink">
+        <span class="inline-block h-2 w-2 rounded-full bg-accent"></span>
         Neelkamal Badana
       </a>
-      <div class="hidden gap-6 text-sm font-medium text-muted sm:flex">
-        <a href="#research" class="hover:text-accent transition-colors">Research</a>
-        <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
-        <a href="#experience" class="hover:text-accent transition-colors">Experience</a>
-        <a href="#credentials" class="hover:text-accent transition-colors">Education</a>
-        <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+      <div class="hidden items-center gap-7 text-sm font-medium text-muted sm:flex">
+        <a href="#research" class="hover:text-ink transition-colors">Research</a>
+        <a href="#projects" class="hover:text-ink transition-colors">Projects</a>
+        <a href="#experience" class="hover:text-ink transition-colors">Experience</a>
+        <a href="#credentials" class="hover:text-ink transition-colors">Education</a>
+        <a
+          href="https://github.com/bneelkamal"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-full border border-borderLight bg-white px-3.5 py-1.5 text-xs font-semibold text-ink shadow-xs hover:border-slate-300 hover:bg-slate-50 transition-all"
+        >
+          GitHub &nearr;
+        </a>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <header id="top" class="border-b border-slate-200 bg-gradient-to-br from-blue-50 via-white to-slate-50">
-    <div class="mx-auto max-w-5xl px-6 py-16 sm:py-24">
-      <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">
+  <header
+    id="top"
+    class="relative overflow-hidden border-b border-borderLight bg-white"
+  >
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute -top-24 right-0 h-80 w-80 rounded-full bg-blue-50/80 blur-3xl"
+    ></div>
+    <div class="relative mx-auto max-w-5xl px-6 py-20 sm:py-24">
+      <div class="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-accentSoft px-3.5 py-1 text-xs font-semibold text-accent">
         AI Product Management &amp; Machine Learning Research
-      </p>
-      <h1 class="text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+      </div>
+      <h1 class="mt-5 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
         Neelkamal Badana
       </h1>
       <p class="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
-        Product Manager at Zinnia and Executive M.Tech (AI &amp; ML) candidate at IIT Jodhpur.
-        I build practical, well-tested AI systems and research privacy-preserving federated learning
+        Product Manager at <span class="font-semibold text-ink">Zinnia</span> and Executive M.Tech
+        (AI &amp; ML) candidate at <span class="font-semibold text-ink">IIT Jodhpur</span>.
+        I build reliable, well-tested AI systems and research privacy-preserving federated learning
         for regulated domains.
       </p>
-      <div class="mt-8 flex flex-wrap gap-3">
+      <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
           href="https://github.com/bneelkamal"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center rounded-lg bg-ink px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 transition-colors"
+          class="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
         >
-          GitHub Profile
+          Explore GitHub
+          <span aria-hidden="true">&rarr;</span>
         </a>
         <a
-          href="#research"
-          class="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-ink hover:border-slate-400 transition-colors"
+          href="#projects"
+          class="inline-flex items-center rounded-xl border border-borderLight bg-white px-5 py-2.5 text-sm font-semibold text-ink hover:border-slate-300 hover:bg-slate-50 transition-colors"
         >
-          Research &amp; Projects
+          Selected Projects
         </a>
       </div>
     </div>
@@ -77,42 +107,45 @@
   <main class="mx-auto max-w-5xl space-y-20 px-6 py-16">
     <!-- Research (Brief high-level overview only, no unpublished results) -->
     <section id="research">
-      <div class="mb-8">
-        <h2 class="text-2xl font-bold tracking-tight text-ink sm:text-3xl">Research</h2>
-        <p class="mt-2 text-sm text-muted">
-          Ongoing academic research and thesis work. Codebases and manuscripts are kept private prior to publication.
+      <div class="mb-8 flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent">Academic Focus</p>
+          <h2 class="mt-1 text-2xl font-bold tracking-tight text-ink sm:text-3xl">Research</h2>
+        </div>
+        <p class="text-xs text-subtle">
+          Codebases and manuscripts are kept private prior to publication.
         </p>
       </div>
 
       <div class="grid gap-6 md:grid-cols-2">
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <div class="mb-3 flex items-center justify-between gap-2">
-            <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-accent">
-              M.Tech Thesis Project (Frozen)
+        <article class="rounded-2xl border border-borderLight bg-white p-7 shadow-xs">
+          <div class="mb-4 flex items-center justify-between gap-2">
+            <span class="rounded-full bg-accentSoft px-3 py-1 text-xs font-semibold text-accent">
+              M.Tech Thesis (Frozen)
             </span>
-            <span class="text-xs font-medium text-slate-500">Private Repository</span>
+            <span class="text-xs font-medium text-subtle">Private Codebase</span>
           </div>
-          <h3 class="text-lg font-bold text-ink">
+          <h3 class="text-lg font-bold tracking-tight text-ink">
             FedStrat: Privacy-Preserving Vertical Federated Learning
           </h3>
-          <p class="mt-2 text-sm leading-relaxed text-muted">
+          <p class="mt-2.5 text-sm leading-relaxed text-muted">
             Designed a privacy-preserving federated learning architecture for cross-domain anti-money
             laundering (AML) detection using Private Set Intersection (PSI) and an interpretable
             Vertical Critic to address regulatory data silos across institutions.
           </p>
         </article>
 
-        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <div class="mb-3 flex items-center justify-between gap-2">
-            <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800">
+        <article class="rounded-2xl border border-borderLight bg-white p-7 shadow-xs">
+          <div class="mb-4 flex items-center justify-between gap-2">
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
               In Preparation
             </span>
-            <span class="text-xs font-medium text-slate-500">2 Manuscripts</span>
+            <span class="text-xs font-medium text-subtle">2 Manuscripts</span>
           </div>
-          <h3 class="text-lg font-bold text-ink">
+          <h3 class="text-lg font-bold tracking-tight text-ink">
             Upcoming Research Papers
           </h3>
-          <p class="mt-2 text-sm leading-relaxed text-muted">
+          <p class="mt-2.5 text-sm leading-relaxed text-muted">
             Currently preparing two research manuscripts focused on privacy-preserving collaborative
             learning and trustworthy AI systems. Details and experimental artifacts remain private
             until peer review and publication.
@@ -124,116 +157,125 @@
     <!-- Featured Public Projects -->
     <section id="projects">
       <div class="mb-8">
-        <h2 class="text-2xl font-bold tracking-tight text-ink sm:text-3xl">
-          Selected Public Projects &amp; Coursework
+        <p class="text-xs font-semibold uppercase tracking-widest text-accent">Open Source</p>
+        <h2 class="mt-1 text-2xl font-bold tracking-tight text-ink sm:text-3xl">
+          Selected Projects &amp; Coursework
         </h2>
         <p class="mt-2 text-sm text-muted">
-          Engineering prototypes, AI/ML implementations, and graduate coursework available on GitHub.
+          Engineering prototypes, AI/ML implementations, and graduate systems coursework on GitHub.
         </p>
       </div>
 
       <div class="grid gap-6 md:grid-cols-2">
-        <article class="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+        <article class="group flex flex-col justify-between rounded-2xl border border-borderLight bg-white p-7 shadow-xs hover:border-blue-200 hover:shadow-md transition-all">
           <div>
-            <div class="mb-3 flex flex-wrap gap-2">
+            <div class="mb-4 flex flex-wrap gap-2">
               <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Python</span>
               <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">LangGraph</span>
               <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Streamlit</span>
             </div>
-            <h3 class="text-lg font-bold text-ink">Agentic AI Data Analyst</h3>
-            <p class="mt-2 text-sm leading-relaxed text-muted">
+            <h3 class="text-lg font-bold tracking-tight text-ink group-hover:text-accent transition-colors">
+              Agentic AI Data Analyst
+            </h3>
+            <p class="mt-2.5 text-sm leading-relaxed text-muted">
               A multi-step LangGraph workflow that ingests CSV/XLSX files or public URLs, recommends
               analyses, builds interactive charts, and enforces input/URL security validation with unit tests.
             </p>
           </div>
-          <div class="mt-5">
+          <div class="mt-6 border-t border-slate-100 pt-4">
             <a
               href="https://github.com/bneelkamal/ai-portfolio/tree/main/projects/ai-data-analyst"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-sm font-semibold text-accent hover:underline"
+              class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
             >
-              View on GitHub &rarr;
+              View repository <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </article>
 
-        <article class="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+        <article class="group flex flex-col justify-between rounded-2xl border border-borderLight bg-white p-7 shadow-xs hover:border-blue-200 hover:shadow-md transition-all">
           <div>
-            <div class="mb-3 flex flex-wrap gap-2">
+            <div class="mb-4 flex flex-wrap gap-2">
               <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Python</span>
               <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Search &amp; CSP</span>
             </div>
-            <h3 class="text-lg font-bold text-ink">Artificial Intelligence Solvers &amp; Agents</h3>
-            <p class="mt-2 text-sm leading-relaxed text-muted">
+            <h3 class="text-lg font-bold tracking-tight text-ink group-hover:text-accent transition-colors">
+              Artificial Intelligence Solvers &amp; Agents
+            </h3>
+            <p class="mt-2.5 text-sm leading-relaxed text-muted">
               Implementations of classical AI search and constraint satisfaction problems, including a
               Sudoku CSP solver, N-Queens local search, warehouse agent, and meetup search.
             </p>
           </div>
-          <div class="mt-5">
+          <div class="mt-6 border-t border-slate-100 pt-4">
             <a
               href="https://github.com/bneelkamal/ArtificialIntelligence"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-sm font-semibold text-accent hover:underline"
+              class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
             >
-              View on GitHub &rarr;
+              View repository <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </article>
 
-        <article class="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+        <article class="group flex flex-col justify-between rounded-2xl border border-borderLight bg-white p-7 shadow-xs hover:border-blue-200 hover:shadow-md transition-all">
           <div>
-            <div class="mb-3 flex flex-wrap gap-2">
+            <div class="mb-4 flex flex-wrap gap-2">
               <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Python</span>
-              <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">ML</span>
+              <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Machine Learning</span>
             </div>
-            <h3 class="text-lg font-bold text-ink">Machine Learning &amp; Applied Projects</h3>
-            <p class="mt-2 text-sm leading-relaxed text-muted">
+            <h3 class="text-lg font-bold tracking-tight text-ink group-hover:text-accent transition-colors">
+              Machine Learning &amp; Applied Projects
+            </h3>
+            <p class="mt-2.5 text-sm leading-relaxed text-muted">
               Collection of supervised and unsupervised learning experiments, feature engineering,
               and applied modeling projects from graduate coursework.
             </p>
           </div>
-          <div class="mt-5">
+          <div class="mt-6 border-t border-slate-100 pt-4">
             <a
               href="https://github.com/bneelkamal/MachineLearning"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-sm font-semibold text-accent hover:underline"
+              class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
             >
-              View on GitHub &rarr;
+              View repository <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </article>
 
-        <article class="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+        <article class="group flex flex-col justify-between rounded-2xl border border-borderLight bg-white p-7 shadow-xs hover:border-blue-200 hover:shadow-md transition-all">
           <div>
-            <div class="mb-3 flex flex-wrap gap-2">
+            <div class="mb-4 flex flex-wrap gap-2">
               <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">Cloud</span>
-              <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">GPU</span>
+              <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">GPU Computing</span>
             </div>
-            <h3 class="text-lg font-bold text-ink">Virtualization, Cloud &amp; GPU Computing</h3>
-            <p class="mt-2 text-sm leading-relaxed text-muted">
+            <h3 class="text-lg font-bold tracking-tight text-ink group-hover:text-accent transition-colors">
+              Virtualization, Cloud &amp; GPU Computing
+            </h3>
+            <p class="mt-2.5 text-sm leading-relaxed text-muted">
               Systems coursework covering virtualization and cloud computing (VCC) alongside parallel
               and GPU computing assignments.
             </p>
           </div>
-          <div class="mt-5 flex gap-5">
+          <div class="mt-6 flex gap-6 border-t border-slate-100 pt-4">
             <a
               href="https://github.com/bneelkamal/VCC"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-sm font-semibold text-accent hover:underline"
+              class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
             >
-              VCC Repo &rarr;
+              VCC Repo <span aria-hidden="true">&rarr;</span>
             </a>
             <a
               href="https://github.com/bneelkamal/GPU"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-sm font-semibold text-accent hover:underline"
+              class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
             >
-              GPU Repo &rarr;
+              GPU Repo <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </article>
@@ -242,25 +284,31 @@
 
     <!-- Experience -->
     <section id="experience">
-      <h2 class="mb-6 text-2xl font-bold tracking-tight text-ink sm:text-3xl">Experience</h2>
+      <div class="mb-8">
+        <p class="text-xs font-semibold uppercase tracking-widest text-accent">Career</p>
+        <h2 class="mt-1 text-2xl font-bold tracking-tight text-ink sm:text-3xl">Experience</h2>
+      </div>
+
       <div class="space-y-4">
-        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div class="rounded-2xl border border-borderLight bg-white p-7 shadow-xs">
           <div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
             <h3 class="text-lg font-bold text-ink">Product Manager</h3>
-            <span class="text-sm font-medium text-accent">Sep 2025 &ndash; Present</span>
+            <span class="inline-flex w-fit rounded-full bg-accentSoft px-3 py-0.5 text-xs font-semibold text-accent">
+              Sep 2025 &ndash; Present
+            </span>
           </div>
-          <p class="text-sm font-semibold text-muted">Zinnia</p>
+          <p class="mt-0.5 text-sm font-semibold text-muted">Zinnia</p>
           <p class="mt-3 text-sm leading-relaxed text-muted">
             Driving product strategy and lifecycle execution, bridging complex technical systems
             and measurable user and business outcomes.
           </p>
         </div>
 
-        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div class="rounded-2xl border border-borderLight bg-white p-7 shadow-xs">
           <div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
             <h3 class="text-lg font-bold text-ink">Senior Manager</h3>
           </div>
-          <p class="text-sm font-semibold text-muted">Punjab National Bank</p>
+          <p class="mt-0.5 text-sm font-semibold text-muted">Punjab National Bank</p>
           <p class="mt-3 text-sm leading-relaxed text-muted">
             Led digital transformation initiatives with a focus on optimizing and deploying core
             banking platforms including Finacle.
@@ -271,30 +319,31 @@
 
     <!-- Education & Certifications -->
     <section id="credentials" class="grid gap-6 md:grid-cols-2">
-      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 class="mb-4 text-xl font-bold text-ink">Education</h2>
-        <h3 class="text-base font-bold text-ink">
-          Executive M.Tech in Artificial Intelligence &amp; Machine Learning
-        </h3>
-        <p class="mt-1 text-sm font-medium text-muted">IIT Jodhpur</p>
+      <div class="rounded-2xl border border-borderLight bg-white p-7 shadow-xs">
+        <p class="text-xs font-semibold uppercase tracking-widest text-accent">Education</p>
+        <h2 class="mt-1 text-xl font-bold text-ink">
+          Executive M.Tech in AI &amp; Machine Learning
+        </h2>
+        <p class="mt-1 text-sm font-semibold text-muted">IIT Jodhpur</p>
         <p class="mt-3 text-sm leading-relaxed text-muted">
           Graduate focus on machine learning, artificial intelligence, GPU/cloud systems, and
           privacy-preserving federated learning research.
         </p>
       </div>
 
-      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 class="mb-4 text-xl font-bold text-ink">Certifications</h2>
-        <ul class="space-y-2.5 text-sm text-muted">
-          <li class="flex items-center gap-2">
+      <div class="rounded-2xl border border-borderLight bg-white p-7 shadow-xs">
+        <p class="text-xs font-semibold uppercase tracking-widest text-accent">Credentials</p>
+        <h2 class="mt-1 text-xl font-bold text-ink">Certifications</h2>
+        <ul class="mt-4 space-y-3 text-sm text-muted">
+          <li class="flex items-center gap-2.5">
             <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
             Certified Scrum Product Owner (CSPO)
           </li>
-          <li class="flex items-center gap-2">
+          <li class="flex items-center gap-2.5">
             <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
             Lean Six Sigma Green Belt
           </li>
-          <li class="flex items-center gap-2">
+          <li class="flex items-center gap-2.5">
             <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
             Oracle AI Vector Search Professional
           </li>
@@ -303,20 +352,20 @@
     </section>
   </main>
 
-  <!-- Footer / Contact -->
-  <footer id="contact" class="border-t border-slate-200 bg-white">
-    <div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-muted sm:flex-row">
+  <!-- Light Footer -->
+  <footer id="contact" class="border-t border-borderLight bg-white">
+    <div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-subtle sm:flex-row">
       <p>&copy; 2026 Neelkamal Badana</p>
-      <div class="flex gap-6">
+      <div class="flex items-center gap-6">
         <a
           href="https://github.com/bneelkamal"
           target="_blank"
           rel="noopener noreferrer"
-          class="font-medium hover:text-accent transition-colors"
+          class="font-medium text-muted hover:text-accent transition-colors"
         >
           GitHub
         </a>
-        <!-- Add your LinkedIn / Google Scholar / Email links here -->
+        <!-- Add LinkedIn / Google Scholar / Email links here -->
       </div>
     </div>
   </footer>
